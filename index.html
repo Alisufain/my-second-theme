@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fce6612c24.js" crossorigin="anonymous"></script>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        #boder
+        {
+            border-top:4px solid green;
+        }
+        #dateandtime
+        {
+            height:25px;
+            width:250px;
+            background-color:black;
+            margin-left: 65%;
+
+        }
+        #logoandicons
+        {
+            height:110px;
+            width:84.5%;
+            margin-left:7.75%;
+            padding:1px;
+            /* border:1px solid red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+        }
+        #logo1
+        {
+            height:105px;
+            width:240px;
+            background-size: 100% 100%;
+            background-image: url("logo.jpg");
+            position: relative;
+            top:-19px;
+
+        }
+        #phonenumber
+        {
+            height:30px;
+            width:260px;
+            /* margin-left:76.5%;
+            margin-top:-95px; */
+            font-size: 29px;
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    /* border:1px solid cyan; */
+    position: absolute;
+    left:78%;
+    top:12px;
+    
+    color: #003;
+        }
+        #phoneicon
+        {
+            height:40px;
+            width:30px;
+            /* margin-left:73.5%;
+            margin-top:-40px; */
+            position: absolute;
+            left:76%;
+            top:4px;
+            font-size: 36px;;
+        }
+        #iconsbig
+        {
+            height:40px;
+            width:185px;
+            /* border:1px solid red; */
+            /* float:right; */
+            display: flex;
+            align-self:center;
+            justify-content: flex-end;
+            justify-content: space-between;
+            position: relative;
+            top:0px;
+        }
+        #icon1 {
+            background-color: #036;
+          font-size: 18px;
+          width: 36px;
+         height: 36px;
+         line-height: 36px;
+        text-align: center;
+        color: #bbb;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+            margin-left:30px;
+        }
+        #icon1:hover{
+            background-color:orange;
+        }
+        #icon2 {
+            background-color: #036;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #bbb;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon2:hover{
+            background-color:orange;
+        }
+        #icon3 {
+            background-color: #036;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #bbb;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon3:hover{
+            background-color:orange;
+        }
+        #icon4 {
+            background-color: #036;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: #bbb;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon4:hover{
+            background-color:orange;
+        }
+        #taskbaritems
+        {
+            height:100px;
+            width:84.5%;
+            margin-left:7.75%;
+            background: #0d783e;
+            text-align: center;
+            padding:1px;
+            margin-top:-18px;
+        }
+        #taskbaritems ul
+        {
+            margin-left:12px;
+        }
+        #taskbaritems ul li
+        {
+            float:left;
+            margin-left:20px;
+            list-style: none;
+            margin-top: 20px;
+            /* border-right: 1px solid whitesmoke;
+            font-size: 16px; */
+            cursor: pointer;
+            font-family: "open sans",sans-serif;
+            font-weight: normal;
+            font-size: 12.5px;
+            color: #fff;
+            border-right: 1px #009933 solid;
+            text-transform: uppercase;
+             padding-left: 6px;
+            padding-right: 6px;
+        }
+        #taskbaritems ul li:hover{
+            color:orange;
+        }
+        #taskbar2
+        {
+            width:84.65%;
+            margin-left:7.75%;
+            background: #036;
+            height: 30px;
+            padding:1px;
+            box-sizing: border-box;
+        }
+        #taskbar2 ul{
+            margin-left:16%;
+            margin-top:-10px;
+        }
+        #taskbar2 ul li
+        {
+            float:left;
+            margin-left:20px;
+            list-style: none;
+            margin-top: 20px;
+            /* border-right: 1px solid whitesmoke;
+            font-size: 16px; */
+            cursor: pointer;
+            font-family: "open sans",sans-serif;
+            font-weight: normal;
+            font-size: 13px;
+            color: #fff;
+            border-right: 1px #009933 solid;
+            text-transform: uppercase;
+             padding-left: 6px;
+            padding-right: 6px;
+        }
+        #taskbar2 ul li:hover{
+            color:orange;
+        }
+
+        #slider1
+        {
+            height:450px;
+            width:100%;
+            margin-top:50px;
+            background-size: 100% 100%;
+            background-image: url("slide1.jpg");
+            border-bottom:1px solid green;
+            animation-name: mymy;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            padding:0.5px;
+        }
+        @keyframes mymy
+        {
+            0%{background-image:url("slide1.jpg") ;}
+            16%{background-image:url("slide2.jpg") ;}
+            32%{background-image:url("slide3.jpg") ;}
+            48%{background-image:url("slide4.jpg") ;}
+            64%{background-image:url("slide5.jpg") ;}
+            80%{background-image:url("slide6.jpg") ;}
+            100%{background-image:url("slide7.jpg") ;}
+        }
+        .leftarow{
+            height:40px;
+            width:40px;
+            background: transparent;
+            border: 1px solid white;
+            font-size: 36px;
+            margin-top:-15px;
+            color:white;
+            margin-left: 40px;
+            visibility: hidden;
+            text-align: center;
+            padding:5px;
+            animation: roll 1s linear;
+        }
+        @keyframes roll
+        {
+            0%{transform: translateX(-30px);}
+            100%{transform: translateX(30px);}
+        }
+        #slider1:hover .leftarow
+        {
+            visibility: visible;
+            cursor: pointer;
+        }
+        .rightarow{
+            height:40px;
+            width:40px;
+            background: transparent;
+            border: 1px solid white;
+            font-size: 36px;
+            color:white;
+            margin-right: 40px;
+            float:right;
+            display: block;
+            margin-top:-50px;
+            visibility: hidden;
+            text-align: center;
+            padding:5px;
+            animation: roll1 1s  linear;
+        }
+        @keyframes roll1
+        {
+            0%{transform: translateX(30px);}
+            100%{transform: translateX(-30px);}
+        }
+        #slider1:hover .rightarow
+        {
+            visibility: visible;
+            cursor: pointer;
+        }
+        #underhidding
+        {
+            height:31px;
+            width:373px;
+            background-size: 100% 100%;
+            background-image:url("under-heading.png");
+            top:60px;
+            left:35%;
+          position: relative;
+        }
+        #fourimg
+        {
+            height:350px;
+            width:85%;
+            margin-left:7.5%;
+            padding:1px;
+            margin-top: 80px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* align-content: center; */
+            
+        }
+        #fourimg:hover{
+            box-shadow: 1px 1px 3px 3px green;
+            cursor: pointer;
+
+        }
+        #oneimg1
+        {
+            height:164.5px;
+            width:252.5px;
+            /* border:1px solid green; */
+            padding:1px;
+            display: inline-block;
+            background-size: 100% 100%;
+            background-image: url("box-1.jpg");
+            cursor: pointer;
+        }
+        #oneimg2
+        {
+            height:164.5px;
+            width:252.5px;
+            /* border:3px solid green; */
+            padding:1px;
+            /* display: inline-block; */
+            margin-left:2.75%;
+            background-size: 100% 100%;
+            background-image: url("box-2.jpg");
+            cursor: pointer;
+        }
+        #oneimg3
+        {
+            height:164.5px;
+            width:252.5px;
+            /* border:3px solid green; */
+            padding:1px;
+            /* display: inline-block; */
+            margin-left:2.75%;
+            background-size: 100% 100%;
+            background-image: url("box-3.jpg");
+            cursor: pointer;
+        }
+        #oneimg4
+        {
+            height:164.5px;
+            width:252.5px;
+            /* border:3px solid green; */
+            padding:1px;
+            /* display: inline-block; */
+            margin-left:2.75%;
+            background-size: 100% 100%;
+            background-image: url("box-4.jpg");
+            cursor: pointer;
+        }
+        /* h4
+        {
+            display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        } */
+        #onepara1
+        {
+            height:164.5px;
+            width:252.5px;
+            
+            padding:1px;
+            /* margin-top:25px; */
+            text-align: center;
+            /* border:1px solid red; */
+            position: relative;
+            top:15px;
+            cursor: text;
+
+           
+        }
+        #onepara1 h4
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+             font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            padding-top:5px;
+            box-sizing: border-box;
+        }
+        #onepara1 p
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #666;
+    
+    
+        }
+        #onepara2 h4
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+             font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+        }
+        #onepara2 p
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #666;
+            /* margin-top:-10px; */
+        }
+        p{
+            display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        }
+        #onepara2
+        {
+            height:164.5px;
+            width:252.5px;
+            
+            padding:1px;
+            /* margin-top:25px; */
+            text-align: center;
+            /* border:1px solid red; */
+            position: relative;
+            top:15px;
+            cursor: text;
+        }
+        #onepara3
+        {
+            height:164.5px;
+            width:252.5px;
+            position: relative;
+            top:15px;
+            padding:1px;
+            /* margin-left:51.5%;
+            margin-top:-195px; */
+            text-align: center;
+            cursor: text;
+            
+        }
+        #onepara3 h4
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+             font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+        }
+        #onepara3 p
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #666;
+            /* margin-top:-10px; */
+        }
+        #onepara4
+        {
+            height:164.5px;
+            width:252.5px;
+            position: relative;
+            top:15px;
+            padding:1px;
+            
+            /* margin-left:77.25%;
+            margin-top:-195px; */
+            text-align: center;
+            cursor: text;
+            
+        }
+        #onepara4 h4
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+             font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+        }
+        #onepara4 p
+        {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #666;
+            /* margin-top:-10px; */
+        }
+        #datadata1
+        {
+            line-height: 1.5;
+        }
+        #waddapara
+        {
+            height:770px;
+            width:85%;
+            margin-left:9%;
+            /* margin-top:10px; */
+            font-size: 14px;
+            line-height: 1.5;
+            columns: #333333;
+            /* border:1px solid red; */
+            font-family: "Helvetica Neue",Helvetica,arial, sans-serif;
+
+        }
+        #boddertop
+        {
+            border:2px solid orange;
+            margin-top:80px;
+        }
+        #footer
+        {
+            height:520px;
+            width:100%;
+            background-color:#F3F3F3;
+            padding:1px;
+        }
+        #pages
+        {
+            height:200px;
+            width:250px;
+            margin-left:10%;
+            margin-top:30px;
+            
+        }
+        #pages ul{
+            margin-top:20px;
+        }
+        #pages ul li{
+            list-style: none;
+            margin-top:15px;
+            color:black;
+        }
+        #pages ul li:hover
+        {
+            color:orange;
+            cursor:pointer;
+        }
+        #pages1
+        {
+            height:200px;
+            width:250px;
+            
+            margin-left:30%;
+            margin-top:-200px; 
+        }
+        #pages1 ul{
+            margin-top:20px;
+        }
+        #pages1 ul li{
+            list-style: none;
+            margin-top:15px;
+            color:black;
+        }
+        #pages1 ul li:hover
+        {
+            color:orange;
+            cursor:pointer;
+        }
+        #contactinfo
+        {
+            height:350px;
+            width:350px;
+            margin-left:52%;
+            margin-top:-210px;
+            background-size: 100% 100%;
+            background-image: url("info.JPG");
+        }
+        #map1
+        {
+            height:250px;
+            width:250px;
+            margin-left:80%;
+            margin-top:-350px;
+            background-size: 100% 100%;
+            background-image: url("info.JPG");
+        }
+        #upperbotton
+        {
+            height:45px;
+            width:45px;
+            background-size: 100% 100%;
+            background-image: url("top.png");
+            position: relative;
+            left:93%;
+            top:-70px;
+        }
+       
+        .divo
+        {
+            height:120px;
+            width:100%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .divo h2
+        {
+            font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 25px;
+    width:40%;
+    /* border:1px solid; */
+    text-align: center;
+        }
+        #underhidding1
+        {
+            height:31px;
+            width:373px;
+            background-size: 100% 100%;
+            background-image:url("under-heading.png");
+            /* top:60px;
+            left:35%;
+          position: relative; */
+        }
+        .footermain
+        {
+            height:320px;
+            width:84%;
+            position: relative;
+            left:8%;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top:60px;
+            letter-spacing: 1.1px;
+        }
+        #pagess
+        {
+            height:85%;
+            width:20%;
+            /* border:1px solid red; */
+        }
+        #pagess h3
+        {
+            font-family: 'Open Sans', sans-serif;
+           font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        }
+        #pagess ul{
+            margin-top:20px;
+        }
+        #pagess ul li{
+            list-style: none;
+            margin-top:5px;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 2;
+            color:gray;
+            font-size: 13px;
+            font-family:'Helvetica Neue',Helvetica,Arial, sans-serif;
+        }
+        #pagess ul li:hover
+        {
+            color:orange;
+            cursor:pointer;
+        }
+
+        #pagess1
+        {
+            height:85%;
+            width:20%;
+            /* border:1px solid red; */
+        }
+        #pagess1 h3
+        {
+            font-family: 'Open Sans', sans-serif;
+           font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        }
+        #pagess1 ul{
+            margin-top:20px;
+        }
+        #pagess1 ul li{
+            list-style: none;
+            margin-top:5px;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 2;
+            color:gray;
+            font-size: 13px;
+            font-family:'Helvetica Neue',Helvetica,Arial, sans-serif;
+        }
+        #pagess1 ul li:hover
+        {
+            color:orange;
+            cursor:pointer;
+        }
+        #pagess2
+        {
+            height:100%;
+            width:27%;
+            /* border:1px solid red; */
+        }
+        #pagess2 h3
+        {
+            font-family: 'Open Sans', sans-serif;
+           font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        }
+        #pagess2 ul{
+            margin-top:20px;
+        }
+        #pagess2 ul li{
+            list-style: none;
+            line-height: 2;
+            font-family: "Open sans",sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: 1px;
+            word-spacing: 1.1px;
+            color:gray;
+            font-size: 13px;
+            font-family:'Helvetica Neue',Helvetica,Arial, sans-serif;
+            /* border: 1px solid red; */
+            /* height:30px; */
+        }
+        #pagess3
+        {
+            height:75%;
+            width:20%;
+            /* border:1px solid red; */
+            background-size: 100% 100%;
+            background-image: url("capture.png");
+        }
+        .iconss
+        {
+            color:#F78E21
+        }
+        span
+        {
+            color: #F78E21;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="boder"></div>
+    <div id="dateandtime"></div>
+    <div id="logoandicons">
+        <div id="logo1"></div>
+        <div id="phonenumber">
+            <h6 style="margin-left:10px;">+(92)302/321 690 69 75</h6>
+        </div>
+        <div id="phoneicon">
+            <i  style="color:green;font-size:28px;"class="fas fa-phone-alt"></i>
+        </div>
+        <div id="iconsbig">
+        <div id="icon1">
+            <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-facebook-f"></i>
+        </div>
+        <div id="icon2">
+            <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-twitter"></i>
+        </div>
+        <div id="icon3">
+            <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-instagram-square"></i>
+        </div>
+        <div id="icon4">
+            <i style="color:white;font-size: 28px;text-align: center;" class="fas fa-envelope"></i>
+        </div>
+    </div>
+</div>
+    <div id="taskbaritems">
+        <ul>
+            <li >Home</li>
+            <li >About</li>
+            <li >Poultry and LiveStock</li>
+            <li >Feed Aditives</li>
+            <li>Farm Aquipment & Auxiliaries</li>
+            <li>Customer Clearing Agents</li>
+            <li>Real State partners</li>
+        </ul>
+        <ul>
+            <li style="margin-left:40%;margin-top:35px;">Photo Gallery</li>
+        </ul>
+    </div>
+    <div id="taskbar2">
+        <ul>
+            <li >Grains</li>
+            <li >Green Fodder</li>
+            <li >Vegetable</li>
+            <li >VIT-Meniral Premix</li>
+            <li>Molasess</li>
+            <li >Contact Us</li>
+        </ul>
+    </div>
+    <div id="slider1">
+    <h3 style="width:100%;color: #0C0;
+    text-shadow: #333 3px 3px 3px; font-size:28px;text-align: center;font-weight: 100;margin-top:140px;"><strong> Family Business Since 1927</strong> </h3> 
+    <p style="width:100%;text-align:center;color:#03f;font-size:20px;font-weight:bold;
+    font-family: 'Trebuchet MS',Arial, Helvetica, sans-serif; margin-top:10px;">Animal Health and Nutration thorough Advance nutrition</2>   
+    <div class="leftarow"><i class="fas fa-angle-left"></i></div>
+    <div class="rightarow"><i class="fas fa-angle-right"></i></div>
+    </div>
+    <h2 style="font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;text-align: center;position: relative;top:50px;width:100%;display:block;">WELCOME TO OUR SITE,M/S GONDAL BROTHERS</h2>
+    <div id="underhidding"></div>
+    <div id="fourimg">
+        <div id="oneimg1"></div>
+        <div id="oneimg2"></div>
+        <div id="oneimg3"></div>
+        <div id="oneimg4"></div>
+        <div id="onepara1">
+            <h4>FEED ADDITIVES</h4>
+            <div id="datadata1">
+                <p>
+                    We m/s Gondal Brothers in supply<br>
+                    of prime quality &  range of feed<br>
+                    supplements  Vegetable Meals,<br>
+                    Gluten Meals, DCP ( China,<br>
+                    Japan), Bypass Fat, Bypass ,<br>
+                </p>
+            </div>
+        </div>
+        <div id="onepara2">
+            <h4>FARM EQUIPMENTS AND AUXILIARIES</h4>
+            <div id="datadata1">
+                <p>
+                    In our daily works, we also pay much<br>
+                    attention to building enterprise culture.<br>
+                    Working in a harmonious working<br>
+                    atmosphere, everyone is full of enthusiasm,<br>
+                    
+                    
+                </p>
+            </div>
+        </div>
+        <div id="onepara3">
+           <h4> REAL ESTATE PARTNERS</h4>
+           <div id="datadata1">
+            <p>
+                In our daily works, we also pay <br>
+                estate organization in Pakistan with a <br>
+                educated, dedicated and  individuals<br>
+                who have been providing quality real <br>
+                services of sale,.<br>
+                
+            </p>
+        </div>
+        </div>
+        <div id="onepara4">
+            <h4>CUSTOMS CLEARING AGENTS</h4>
+            <div id="datadata1">
+                <p>
+                    Welcome to the evolutionarily  World<br>
+                    of m/s Gondal Brothers . Being the<br>
+                    leading Customs Clearing  in<br>
+                    Pakistan, we have earned   as<br>
+                    International Freight
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="divo">
+        <h2 >ABOUT GONDAL BROTHERS</h2>
+        <div id="underhidding1"></div>    
+    </div>
+  
+    <div id="waddapara">
+        <p>
+            Gondal Brothers provide comprehensive services related to Imports, Indenting, Marketing and Sales of high quality Poultry, Livestock, Equine & Aquaculture Feed Raw Material / <br>
+            Additives, Livestock Farm Equipment & Auxiliaries, Poultry Control House Equipments,  & Livestock sectors.
+            In <br><br> Agents for Poultry, Cement, Socks, Iron & Steel, Ceramics, Hospitals<br>
+            and Textile Industries etc. Invaluable con sultancy services are available regarding Customs Tariff applicability, Laws, Procedures and Sales Tax etc. We do provide proper guidance in<br>
+            the preparation of Import documents so as to avoid delays and complications at the time of clearance of goods. we ensures the careful preparation of appropriate documentation and <br>
+            the correct importing and exporting procedures are followed to minimize clearance delays.<br><br>
+            Gondal Realty Partners is a leading real estate organization in Pakistan with a team of educated, dedicated and talented individuals who have been providing quality real estate<br>
+            services of sale, purchase and rent in all categories of residential and commercial plots, houses, apartments, offices, shops, farm houses, agricultural and industrial lands. We has <br>
+            grown into the network is known for its honesty, fairness in dealings, technology application, strength and innovative approach to all client needs pertaining to real estate transactions.<br>
+            <br>
+            In a very short span of time we have made inroad in the local market and have developed sound credibility and trust with our customers. Gondal Brothers is working to serve the<br>
+            focused industries to the best of their satisfaction with the goal<br><br>
+            <b>“<i>Work Together for Mutual Growth & Goodwill</i>”</b><br>
+            Gondal Brothers believes in working closely with its customers in order to establish long-term business relationships which last even after the deals are matured. We share information<br>
+            with our clientele regarding products, technology and expertise for mutual business interests. Our satisfied clients confirm our belief that we are constantly moving towards that goal.<br><br>
+            The company is managed by a well organized team of professional personals. They have broad visionary ideals, believing in<br><br>
+            · Knowledge of competent and reliable sources<br><br>
+            · Sound marketing & technical background<br><br>
+            · Developing a strong buyer-seller relationship<br><br>
+            Loyalty and commitment to service<br><br><br>
+            We feel privilege to represent below diversified Principals spread around the globe through country wide strong distribution network for their wide range of products.<br><br>
+            Keeping in view our dynamic activities in the respective area of services, we therefore, feel privilege to offer our services as Indentor in lieu with our expertise & outstanding skills. We<br>
+            assure you competitive prices, committed quality assurance and in time delivery of consignments. We would like you to please enlist our organization on your panel, enabling us to<br>
+            serve you while fulfilling all the pre-requisites in this regard.
+        </p>
+    </div>
+    <div id="boddertop"></div>
+    <div id="footer">
+        <h3 style="margin-left:9%;margin-top:3%;
+        font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;"
+        >Follow Us:</h3>
+        <div style="height:40px;width:195px;margin-left:19.5%;margin-top:-30px;">
+            <div id="icon1">
+                <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-facebook-f"></i>
+            </div>
+            <div id="icon2">
+                <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-twitter"></i>
+            </div>
+            <div id="icon3">
+                <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-instagram-square"></i>
+            </div>
+            <div id="icon4">
+                <i style="color:white;font-size: 28px;text-align: center;" class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="footermain">
+        <div id="pagess">
+            <h3>PAGES</h3>
+            <ul>
+                <li>>Home</li>
+                <li>>Poultry and Live Feeds</li>
+                <li>>Feed Aditives</li>
+                <li>>Farm Equipment and<br> Auxiliaries</li>
+            </ul>
+        </div>
+        <div id="pagess1">
+            <h3>PAGES</h3>
+            <ul>
+                <li>>Home</li>
+                <li>>Poultry and Live Feeds</li>
+                <li>>Feed Aditives</li>
+                <li>>Farm Equipment and Auxiliaries</li>
+            </ul>
+        </div>
+        <div id="pagess2">
+            <h3>contact info</h3>
+            <ul>
+                <li><i class="fas fa-mobile iconss"></i> &nbsp;(+92) 321 698 6918 / (+92) 300 698 6918</li>
+                <li><i class="fas fa-phone-alt iconss"></i>&nbsp;(+92) 38554965 / (+92) 36159289-90</li>
+                <li><i class="fas fa-fax  iconss"></i>&nbsp;(+92) 42 35957237</li>
+                <li><i class="fas fa-map-marker-alt  iconss"></i>&nbsp;Office No.314, Third Floor, ZamZam<br>
+                    Tower, Khayaban-e-Expo Road, Johar Town,<br>
+                    Lahore
+                </li>
+                <li><i class="fas fa-envelope  iconss"></i>&nbsp;<span>info@gondal-brothers.com</span></li>
+                <li><i class="fab fa-skype  iconss"></i>&nbsp;<span>Skype: thisisgondal</span></li>
+                <li><i class="fas fa-globe-europe  iconss"></i>&nbsp;<span>www.gondal-brothers.com</span></li>
+            </ul>
+        </div>
+        <div id="pagess3"></div>
+
+    </div>
+
+        <div style="height:50px;width:60%;margin-left:20%;background-color:green;margin-top:55px;padding: 1px;">
+        <h4 style="color:white;">All rights are Reserved by / Gondal Brother</h4>
+        <h4 style="color:white;float:right;margin-top:-15px;">Designed by Gondal Brothers</h4>
+        </div>
+
+        <a href="#logoandicons"><div id="upperbotton"></div></a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fce6612c24.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        #topblack
+        {
+            border-top:4px solid black;
+        }
+        #datetime1
+        {   
+            position: relative;
+            height:30px;
+            width:300px;
+            background-color:black;
+            left:70%;
+            color:white;
+        }
+        #navbar
+        {
+            height: 110px;
+            width:70%;
+            position: relative;
+            left:15%;
+        }
+        #logo1
+        {
+            height:110px;
+            width:300px;
+            background-size:100% 100%;
+            position: relative;
+            background-image:url("logo.jpg");
+            display:inline-block;
+        }
+        #numberetc
+        {
+            height:100px;
+            width:270px;
+            position:absolute;
+            right:0px;
+            display: inline-block;
+        }
+        #phoneicons
+        {
+            height:45px;
+            width:40px;
+            position: absolute;
+            top:10px;
+            display: inline-block;
+        }
+        #number1
+        {
+            height:45px;
+            width:210px;
+            position: absolute;
+            top:10px;
+            display: inline-block;
+            left:40px;
+        }
+        #iconsbig
+        {
+            height:40px;width:180px;
+            position:absolute;
+            top:45px;
+            left:100px;
+        }
+        #icon1 {
+            height:40px;
+            width:40px;
+            background-color:blue;
+            color:white;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon1:hover{
+            background-color:orange;
+        }
+        #icon2 {
+            height:40px;
+            width:40px;
+            background-color:blue;
+            color:white;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon2:hover{
+            background-color:orange;
+        }
+        #icon3 {
+            height:40px;
+            width:40px;
+            background-color:blue;
+            color:white;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon3:hover{
+            background-color:orange;
+        }
+        #icon4 {
+            height:40px;
+            width:40px;
+            background-color:blue;
+            color:white;
+            display:inline-block;
+            padding:5px;
+            box-sizing: border-box;
+        }
+        #icon4:hover{
+            background-color:orange;
+        }
+
+        #taskbaritems
+        {
+            height:110px;
+            width:70%;
+            position: relative;
+            left:15%;
+            background-color: darkgreen;
+            padding:1px;
+        }
+        #taskbaritems ul
+        {
+            margin-left:30px;
+        }
+        #taskbaritems ul li
+        {
+            color:white;
+            float:left;
+            margin-left:20px;
+            list-style: none;
+            margin-top: 20px;
+            border-right: 1px solid whitesmoke;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #taskbaritems ul li:hover{
+            color:orange;
+        }
+        #taskbar2
+        {
+            height:40px;
+            width:70.15%;
+            position: relative;
+            left:15%;
+            background-color: darkblue;
+            padding:1px;
+            box-sizing: border-box;
+        }
+        #taskbar2 ul{
+            margin-left:20%;
+            margin-top:-10px;
+        }
+        #taskbar2 ul li
+        {
+            color:white;
+            float:left;
+            margin-left:20px;
+            list-style: none;
+            margin-top: 20px;
+            border-right: 1px solid whitesmoke;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #taskbar2 ul li:hover{
+            color:orange;
+        }
+        #slider
+        {
+            height:500px;
+            width:100%;
+            position: relative;
+            top:30px;
+            background-size: 100% 100%;
+            background-image: url("slide1.jpg");
+            border-bottom:3px solid green;
+            animation-name: mymy;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes mymy
+        {
+            0%{background-image:url("slide1.jpg") ;}
+            16%{background-image:url("slide2.jpg") ;}
+            32%{background-image:url("slide3.jpg") ;}
+            48%{background-image:url("slide4.jpg") ;}
+            64%{background-image:url("slide5.jpg") ;}
+            80%{background-image:url("slide6.jpg") ;}
+            100%{background-image:url("slide7.jpg") ;}
+        }
+        #btn1
+        {
+            height:40px;
+            width:40px;
+            color:white;
+            background-color: green;
+            visibility: hidden;
+            position: absolute;
+
+        }
+        slider:hover #btn1{
+            visibility: visible;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="topblack"></div>
+    <div id="datetime1">
+        <input type="datetime" value="datetime">
+    </div>
+    <div id="navbar">
+        <div id="logo1"></div>
+        <div id="numberetc">
+            <div id="phoneicons"><i  style="color:green;font-size: 42px;"class="fas fa-phone-volume"></i></div>
+            <div id="number1"><h1 style="color:black;">+923026906975</h1></div>
+            <div id="iconsbig">
+                <div id="icon1">
+                    <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-facebook-square"></i>
+                </div>
+                <div id="icon2">
+                    <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-twitter"></i>
+                </div>
+                <div id="icon3">
+                    <i style="color:white;font-size: 28px;text-align: center;" class="fab fa-instagram-square"></i>
+                </div>
+                <div id="icon4">
+                    <i style="color:white;font-size: 28px;text-align: center;" class="fas fa-envelope"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="taskbaritems">
+        <ul>
+            <li style="width:50px;">Home</li>
+            <li style="width:50px;">About</li>
+            <li style="width:160px;">Poultry and LiveStock</li>
+            <li style="width:100px;">Feed Aditives</li>
+            <li style="width:210px;">Farm Aquipment & Auxiliaries</li>
+            <li style="width:180px;">Customer Clearing Agents</li>
+            <li style="width:140px;">Real State partners</li>
+        </ul>
+        <ul>
+            <li style="width:100px; margin-left:40%;margin-top:30px;">Photo Gallery</li>
+        </ul>
+    </div>
+    <div id="taskbar2">
+        <ul>
+            <li style="width:60px;">Grains</li>
+            <li style="width:110px;">Green Fodder</li>
+            <li style="width:90px;">Vegetable</li>
+            <li style="width:160px;">VIT-Meniral Premix</li>
+            <li style="width:90px;">Molasess</li>
+            <li style="width:120px;">Contact Us</li>
+        </ul>
+    </div>
+    <div id="slider">
+        <div id="btn1">btn1</div>
+    </div>
+</body>
+</html>
